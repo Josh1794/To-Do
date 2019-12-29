@@ -5,9 +5,9 @@ import ToDo from "./ToDo";
 export default function TaskList() {
   const { state } = useContext(ToDoContext);
   return (
-    <div classname="notes-container">
-      {state.todo.map((todo, i) => {
-        return <ToDo todo={todo} key={i} />;
+    <div className="notes-container">
+      {state.task.map((task, i) => {
+        return <ToDo task={task} key={i} />;
       })}
     </div>
   );

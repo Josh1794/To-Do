@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
+import ToDoContext from "../context";
 
-export default function ToDo({ todo }) {
+export default function ToDo({ task }) {
+  const { dispatch } = useContext(ToDoContext);
   return (
     <div className="note">
-      <p>{todo.text}</p>
+      <p>{task.text}</p>
       <div className="btn-container">
-        <button className="edit">Edit</button>
-        <button className="delete">Delete</button>
+        <button
+          onClick={() => dispatch({ type: "SET_CURRENT_TASK", payload: task })}
+          className="edit"
+        >
+          Edit
+        </button>
+        <button
+          onClick={() => dispatch({ type: "DELETE_TASK", payload: task.id })}
+          className="delete"
+        >
+          Delete
+        </button>
       </div>
     </div>
   );

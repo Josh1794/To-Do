@@ -1,9 +1,9 @@
 import React, { useState, useContext, useRef, useEffect } from "react";
 import ToDoContext from "../context";
 
-export default function AddTask() {
+export default function EditNote() {
   const { state, dispatch } = useContext(ToDoContext);
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState(state.currentTask.text);
 
   let ref = useRef();
 
@@ -20,7 +20,7 @@ export default function AddTask() {
     if (value.trim() === "") {
       alert("Cannot add a blank task");
     } else {
-      dispatch({ type: "ADD_TASK", payload: value });
+      dispatch({ type: "UPDATE_TASK", payload: value });
       setValue("");
     }
   };
@@ -28,8 +28,18 @@ export default function AddTask() {
   return (
     <div className="note-form">
       <form onSubmit={handleSubmit} action="">
-        <input type="text" ref={ref} onChange={handleChange} value={value} />
-        <button>Add Task</button>
+        <textarea
+          ref={ref}
+          onChange={handleChange}
+          value={value}
+          name=""
+          id=""
+          cols="30"
+          rows="10"
+        />
+        <div style={{ textAlign: "right" }}>
+          <button>Update Task</button>
+        </div>
       </form>
     </div>
   );
