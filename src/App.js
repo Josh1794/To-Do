@@ -16,6 +16,7 @@ function App() {
       {state.currentTask === null ? (
         <div>
           <AddTask />
+          <text className="Heading">To-Do</text>
           <TaskList />
         </div>
       ) : (

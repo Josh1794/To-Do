@@ -2,7 +2,7 @@ import React, { useState, useContext, useRef, useEffect } from "react";
 import ToDoContext from "../context";
 
 export default function AddTask() {
-  const { state, dispatch } = useContext(ToDoContext);
+  const { dispatch } = useContext(ToDoContext);
   const [value, setValue] = useState("");
 
   let ref = useRef();

@@ -8,7 +8,7 @@ body {
 nav {
   padding: 20px 10px;
   color: white;
-  background: grey;
+  background: rgb(119, 119, 119);
 }
 
 .note-form {
@@ -28,6 +28,15 @@ nav {
   background: #007bff;
   padding: 5px 10px;
   border: none;
+  border-radius: 10px;
+}
+.note-form button:hover {
+  margin-left: 10px;
+  color: white;
+  background: #777777;
+  padding: 5px 10px;
+  border: 1px, solid, black;
+  border-radius: 10px;
 }
 
 .container {
@@ -41,11 +50,19 @@ nav {
   justify-content: center;
 }
 
+.Heading {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: x-large;
+  margin-bottom: 10px;
+}
+
 .note {
   width: 20%;
   margin: 10px;
   padding: 13px;
-  border-radius: 5px;
+  border-radius: 10px;
   border: solid lightgray 1px;
 }
 
@@ -56,6 +73,7 @@ nav {
 
 .btn-container button {
   margin-right: 10px;
+  border-radius: 10px;
 }
 
 .edit {
@@ -64,10 +82,23 @@ nav {
   padding: 5px 10px;
   border: none;
 }
+.edit:hover {
+  color: white;
+  background: #777777;
+  padding: 5px 10px;
+  border-radius: 100;
+  border: 1px, solid, black;
+}
 
 .delete {
   color: white;
   background: #dc3545;
   padding: 5px 10px;
   border: none;
+}
+.delete:hover {
+  color: white;
+  background: #777777;
+  padding: 5px 10px;
+  border: 1px, solid, black;
 }
