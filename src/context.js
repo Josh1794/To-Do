@@ -1,6 +1,6 @@
 import React from "react";
 
-const toDoContext = React.createContext({
+const ToDoContext = React.createContext({
   currentToDo: null,
   toDo: [
     { id: 1, text: "Do HomeWork" },
@@ -9,4 +9,4 @@ const toDoContext = React.createContext({
   ]
 });
 
-export default toDoContext;
+export default ToDoContext;
